@@ -4,13 +4,23 @@
 #
 # Installation
 # ============
-# Copy and paste the function into or add the following line to your $profile:
-#
+# 1) From PowerShell, create a $profile if you don't have one::
+# 
+#     if (!(test-path $profile)) { new-item -path $profile -itemtype file -force }
+# 
+# 2) Open the profile in notepad::
+# 
+#     notepad.exe $profile
+#     
+# 3) Add the following line and save the file::
+# 
 #    . /path/to/sudo.ps1
+# 
+# 4) sudo will be available in all new PowerShell windows
 #
 # Usage
 # =====
-# $ sudo application [arguments]
+# sudo application [arguments ...]
 #
 # Contact
 # =======
